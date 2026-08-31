@@ -4,7 +4,7 @@
   --rule: #dcdcdc;
   --accent: #2c3e63; /* muted UVA blue */
   --bg: #fdfdfc;
-  --max-width: 760px;
+  --max-width: 860px;
 }
 
 * { box-sizing: border-box; }
@@ -88,30 +88,22 @@ h2 {
 
 .intro {
   display: flex;
-  gap: 32px;
+  gap: 40px;
   align-items: flex-start;
   margin-bottom: 40px;
 }
 
 .headshot {
-  width: 176px;
-  height: 220px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 4px;
+  width: 320px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 6px;
   flex-shrink: 0;
+  display: block;
 }
 
 .intro-text h1 {
-  margin-bottom: 2px;
-}
-
-.subtitle {
-  font-family: "Inter", -apple-system, sans-serif;
-  color: var(--muted);
-  font-size: 15px;
-  margin: 0 0 18px;
-  line-height: 1.5;
+  margin-bottom: 14px;
 }
 
 .jmp-line {
