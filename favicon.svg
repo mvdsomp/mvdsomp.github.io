@@ -1,15 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="18" fill="#0E8C8C"/>
-  <g stroke="#FFFFFF" stroke-width="4.2" stroke-linecap="round" fill="none">
-    <g id="rays">
-      <line x1="45.34" y1="37.86" x2="40.32" y2="24.79"/>
-      <line x1="48.41" y1="37.10" x2="45.85" y2="16.25"/>
-      <line x1="51.58" y1="37.10" x2="54.15" y2="16.25"/>
-      <line x1="54.66" y1="37.86" x2="59.68" y2="24.79"/>
-    </g>
-    <use href="#rays" transform="rotate(90 50 50)"/>
-    <use href="#rays" transform="rotate(180 50 50)"/>
-    <use href="#rays" transform="rotate(270 50 50)"/>
-  </g>
-  <circle cx="50" cy="50" r="9" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="194 94 212 212">
+  <rect x="194" y="94" width="212" height="212" rx="38" fill="#0E8C8C"/>
+  <path d="M378.67 219.14H221.33m174.36-12.76H204.31m191.38-12.76H204.31m174.36-12.76H221.33M280.86 278.67V121.33m12.76 174.36V104.31m12.76 191.38V104.31m12.76 174.36V121.33" stroke="#FCD116" stroke-linecap="round" stroke-width="8.5" fill="none"/>
+  <path d="M300 167.84a32.16 32.16 0 11-31.58 26 32.45 32.45 0 0131.58-26z" fill="#FCD116"/>
 </svg>
