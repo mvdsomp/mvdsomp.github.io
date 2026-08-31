@@ -1,0 +1,254 @@
+:root {
+  --ink: #1a1a1a;
+  --muted: #5a5a5a;
+  --rule: #dcdcdc;
+  --accent: #2c3e63; /* muted UVA blue */
+  --bg: #fdfdfc;
+  --max-width: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 0;
+  margin-bottom: 48px;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.name-link {
+  font-family: "Inter", -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+nav {
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 15px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 22px;
+}
+
+nav a:first-child { margin-left: 0; }
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+}
+
+/* Headings */
+h1 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 30px;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 21px;
+  margin: 0 0 10px;
+}
+
+/* About page */
+.about-page { padding-bottom: 60px; }
+
+.intro {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.headshot {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.intro-text h1 {
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  font-family: "Inter", -apple-system, sans-serif;
+  color: var(--muted);
+  font-size: 15px;
+  margin: 0 0 18px;
+  line-height: 1.5;
+}
+
+.jmp-line {
+  background: #f3f4f7;
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  font-size: 16px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+
+.contact-list li { margin-bottom: 4px; }
+
+.contact-list a { color: var(--accent); }
+
+.committee-section {
+  border-top: 1px solid var(--rule);
+  padding-top: 24px;
+}
+
+.committee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.committee-list li { margin-bottom: 6px; }
+
+/* Links */
+a {
+  color: var(--accent);
+}
+
+/* Research page */
+.fields {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.paper {
+  border-top: 1px solid var(--rule);
+  padding: 28px 0;
+}
+
+.paper:last-child { padding-bottom: 0; }
+
+.paper-tag {
+  display: inline-block;
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.paper h2 { margin-bottom: 10px; }
+
+.paper-links {
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.placeholder-link {
+  color: #999;
+  font-style: italic;
+}
+
+.abstract {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* Teaching page */
+.teaching-block {
+  margin-bottom: 40px;
+}
+
+.teaching-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.teaching-table td {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.teaching-table td:last-child {
+  text-align: right;
+  color: var(--muted);
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  padding-left: 16px;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 14.5px;
+  font-family: "Inter", -apple-system, sans-serif;
+}
+
+.teaching-block ul {
+  font-size: 16px;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 60px;
+  padding: 24px 0;
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 560px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contact-list { text-align: left; }
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  nav a { margin-left: 0; margin-right: 18px; }
+}
