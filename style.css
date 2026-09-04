@@ -175,35 +175,41 @@ a {
 }
 
 /* Teaching page */
-.teaching-block {
-  margin-bottom: 40px;
-}
-
-.teaching-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.teaching-table td {
-  padding: 8px 0;
-  border-bottom: 1px solid var(--rule);
-}
-
-.teaching-table td:last-child {
-  text-align: right;
+.teaching-heading {
+  font-size: 13px;
+  font-family: "Inter", -apple-system, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--muted);
+  margin: 0 0 4px;
+}
+
+.course {
+  border-top: 1px solid var(--rule);
+  padding: 24px 0;
+}
+
+.course h3 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+
+.course .abstract {
+  margin: 0 0 10px;
+}
+
+.course-meta {
   font-family: "Inter", -apple-system, sans-serif;
   font-size: 14px;
-  white-space: nowrap;
-  padding-left: 16px;
+  color: var(--muted);
+  margin: 0;
 }
 
-.note {
-  color: var(--muted);
-  font-size: 14.5px;
-  font-family: "Inter", -apple-system, sans-serif;
+.teaching-block {
+  margin-top: 40px;
 }
 
 .teaching-block ul {
