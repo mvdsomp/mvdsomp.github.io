@@ -185,6 +185,10 @@ a {
   margin: 0 0 4px;
 }
 
+.teaching-heading-spaced {
+  margin-top: 44px;
+}
+
 .course {
   border-top: 1px solid var(--rule);
   padding: 24px 0;
@@ -206,14 +210,6 @@ a {
   font-size: 14px;
   color: var(--muted);
   margin: 0;
-}
-
-.teaching-block {
-  margin-top: 40px;
-}
-
-.teaching-block ul {
-  font-size: 16px;
 }
 
 /* Personal page */
