@@ -182,16 +182,17 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
-  margin: 0 0 4px;
-}
-
-.teaching-heading-spaced {
-  margin-top: 44px;
+  border-top: 1px solid var(--rule);
+  margin: 40px 0 20px;
+  padding-top: 28px;
 }
 
 .course {
-  border-top: 1px solid var(--rule);
   padding: 24px 0;
+}
+
+.course + .course {
+  border-top: 1px solid var(--rule);
 }
 
 .course h3 {
