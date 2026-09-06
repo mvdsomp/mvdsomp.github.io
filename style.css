@@ -219,6 +219,42 @@ a {
 }
 
 /* Personal page */
+.personal-layout {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.personal-sidebar {
+  flex: 0 0 220px;
+}
+
+.personal-sidebar .bio {
+  font-size: 15.5px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.sidebar-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 6px;
+  background: #f3f4f7;
+  color: var(--muted);
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.personal-main {
+  flex: 1;
+  min-width: 0;
+}
+
 .post {
   border-top: 1px solid var(--rule);
   padding: 28px 0;
@@ -291,6 +327,17 @@ a {
 }
 
 /* Responsive */
+@media (max-width: 700px) {
+  .personal-layout {
+    flex-direction: column;
+  }
+  .personal-sidebar {
+    flex: none;
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
 @media (max-width: 560px) {
   .intro {
     flex-direction: column;
