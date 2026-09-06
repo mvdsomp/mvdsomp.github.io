@@ -131,6 +131,11 @@ a {
   color: var(--accent);
 }
 
+.bio {
+  font-size: 17px;
+  margin: 0 0 16px;
+}
+
 /* Research page */
 .fields {
   color: var(--muted);
