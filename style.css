@@ -227,6 +227,9 @@ a {
 
 .personal-sidebar {
   flex: 0 0 220px;
+  position: sticky;
+  top: 32px;
+  align-self: flex-start;
 }
 
 .personal-sidebar .bio {
@@ -235,18 +238,11 @@ a {
   margin: 0;
 }
 
-.sidebar-photo-placeholder {
+.sidebar-photo {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: auto;
   border-radius: 6px;
-  background: #f3f4f7;
-  color: var(--muted);
-  font-family: "Inter", -apple-system, sans-serif;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   margin-bottom: 16px;
 }
 
@@ -335,6 +331,7 @@ a {
     flex: none;
     width: 100%;
     max-width: 260px;
+    position: static;
   }
 }
 
