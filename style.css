@@ -28,6 +28,10 @@ body {
 
 /* Header */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
   border-bottom: 1px solid var(--rule);
   padding: 22px 0;
   margin-bottom: 48px;
@@ -228,8 +232,12 @@ a {
 .personal-sidebar {
   flex: 0 0 220px;
   position: sticky;
-  top: 32px;
+  top: 108px;
   align-self: flex-start;
+}
+
+.personal-sidebar h1 {
+  margin: 0 0 16px;
 }
 
 .personal-sidebar .bio {
