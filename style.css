@@ -178,6 +178,23 @@ a {
   font-style: italic;
 }
 
+.btn {
+  display: inline-block;
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: var(--accent);
+  padding: 7px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #202e4d;
+}
+
 .abstract {
   color: var(--muted);
   font-size: 16px;
