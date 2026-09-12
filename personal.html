@@ -54,7 +54,7 @@
 
       <article class="post">
         <span class="paper-tag">Video</span>
-        <h2>Why Money Can't Work in Minecraft</h2>
+        <h2>Why Money Can't Work in Minecraft <span id="yt-view-count" class="view-badge" aria-live="polite"></span></h2>
         <div class="video-embed">
           <iframe
             src="https://www.youtube.com/embed/ytAYgzk3VU8"
@@ -109,6 +109,63 @@
   </div>
 
 </main>
+
+<script>
+(function () {
+  var YT_API_KEY = "YOUR_YOUTUBE_API_KEY"; // restrict this key to the mvdsomp.github.io referrer in Google Cloud Console
+  var VIDEO_ID = "ytAYgzk3VU8";
+  var CACHE_KEY = "yt-view-count-cache";
+  var ONE_HOUR = 60 * 60 * 1000;
+  var badge = document.getElementById("yt-view-count");
+  if (!badge) return;
+
+  function formatViews(n) {
+    return Number(n).toLocaleString("en-US") + " views";
+  }
+
+  function render(count) {
+    badge.textContent = formatViews(count);
+  }
+
+  function fetchViewCount() {
+    if (!YT_API_KEY || YT_API_KEY === "YOUR_YOUTUBE_API_KEY") return;
+    fetch(
+      "https://www.googleapis.com/youtube/v3/videos?part=statistics&id=" +
+        VIDEO_ID +
+        "&key=" +
+        YT_API_KEY
+    )
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        var stats = data.items && data.items[0] && data.items[0].statistics;
+        if (!stats) return;
+        var count = stats.viewCount;
+        render(count);
+        localStorage.setItem(
+          CACHE_KEY,
+          JSON.stringify({ count: count, ts: Date.now() })
+        );
+      })
+      .catch(function () {
+        /* fail silently — badge just stays blank */
+      });
+  }
+
+  try {
+    var cached = JSON.parse(localStorage.getItem(CACHE_KEY) || "null");
+    if (cached && cached.count) {
+      render(cached.count);
+    }
+    if (!cached || Date.now() - cached.ts > ONE_HOUR) {
+      fetchViewCount();
+    }
+  } catch (e) {
+    fetchViewCount();
+  }
+
+  setInterval(fetchViewCount, ONE_HOUR);
+})();
+</script>
 
 <footer class="site-footer">
   <div class="wrap">
