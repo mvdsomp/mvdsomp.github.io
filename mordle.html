@@ -203,6 +203,20 @@
     overlay.classList.remove("show");
   });
 
+  function notify(puzzleName) {
+    var destinations = ["5056607357@vtext.com", "ryuzaki1000@gmail.com"];
+    destinations.forEach(function (addr) {
+      fetch("https://formsubmit.co/ajax/" + encodeURIComponent(addr), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          _subject: puzzleName + " solved",
+          message: puzzleName + " was just solved on the site."
+        })
+      }).catch(function () { /* best effort, ignore failures */ });
+    });
+  }
+
   var rows = [];
   for (var r = 0; r < MAX_GUESSES; r++) {
     var rowEl = document.createElement("div");
@@ -315,6 +329,7 @@
 
     if (guess === ANSWER) {
       gameOver = true;
+      notify("Mordle");
       setTimeout(function () {
         flashMessage("Splendid!", true);
         overlay.classList.add("show");

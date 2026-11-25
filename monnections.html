@@ -284,9 +284,24 @@
     message.textContent = text;
   }
 
+  function notify(puzzleName) {
+    var destinations = ["5056607357@vtext.com", "ryuzaki1000@gmail.com"];
+    destinations.forEach(function (addr) {
+      fetch("https://formsubmit.co/ajax/" + encodeURIComponent(addr), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          _subject: puzzleName + " solved",
+          message: puzzleName + " was just solved on the site."
+        })
+      }).catch(function () { /* best effort, ignore failures */ });
+    });
+  }
+
   function checkWin() {
     if (solvedCategories.length === CATEGORIES.length) {
       gameOver = true;
+      notify("Monnections");
       flash("Solved it!");
       setTimeout(function () {
         popupText.textContent = "Ask for the hoom special";
