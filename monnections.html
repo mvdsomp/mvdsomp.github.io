@@ -270,10 +270,6 @@
     if (solvedCategories.length === CATEGORIES.length) {
       gameOver = true;
       flash("Solved it!");
-      setTimeout(function () {
-        popupText.textContent = "He needs to go to the park!";
-        overlay.classList.add("show");
-      }, 500);
     }
   }
 
