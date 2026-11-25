@@ -270,6 +270,10 @@
     if (solvedCategories.length === CATEGORIES.length) {
       gameOver = true;
       flash("Solved it!");
+      setTimeout(function () {
+        popupText.textContent = "Ask for the hoom special";
+        overlay.classList.add("show");
+      }, 500);
     }
   }
 
